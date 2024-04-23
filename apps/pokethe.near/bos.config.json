@@ -1,9 +1,9 @@
 {
-  "account": "quickstart.near",
+  "account": "pokethe.near",
   "aliases": ["./aliases.mainnet.json"],
   "overrides": {
     "testnet": {
-      "account": "quickstart.testnet",
+      "account": "pokethe.testnet",
       "aliases": ["./aliases.testnet.json"]
     }
   }

@@ -11,6 +11,6 @@ jobs:
       app-name: "pokethe.near"
       deploy-account-address: pokethe.near
       signer-account-address: pokethe.near
-      signer-public-key: ed25519:4tjmAV1P3PhHAjrHsZwDkDfnxY1nnjD6DfqDun2gy5b9
+      signer-public-key: ed25519:DDerj9bPRdX8M5Rn1VjNhbdpF8Y5bw81KpTHmDBxtib9
     secrets:
       SIGNER_PRIVATE_KEY: ${{ secrets.SIGNER_PRIVATE_KEY }}

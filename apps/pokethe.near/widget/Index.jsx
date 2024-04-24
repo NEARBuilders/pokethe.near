@@ -82,7 +82,9 @@ if (!context.accountId) {
   );
 }
 
-const target = "root.near";
+const target = "mob.near";
+
+// vote for somebody to be the bos
 
 const [clicked, setClicked] = useState(false);
 const [showSettings, setShowSettings] = useState(false);
@@ -118,7 +120,15 @@ return (
   <Container>
     <Header>
       <h1>
-        <a href="" target="_blank" rel="noopener noreferrer" aria-label="github">
+        <span onClick={() => setShowSettings(!showSettings)}>
+          <i className="bi bi-gear-fill" />
+        </span>
+        <a
+          href="https://github.com/nearbuilders/pokethe.near"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="github"
+        >
           <i className="bi bi-github" />
         </a>
       </h1>
@@ -155,10 +165,6 @@ return (
         <Widget src="${config_account}/widget/PokeFeed" props={{ accountId: target }} />
       </PokeFeedContainer>
     </div>
-    <Footer>
-      {/* <div>
-        Built by Build DAO
-      </div> */}
-    </Footer>
+    <Footer>{/*  */}</Footer>
   </Container>
 );

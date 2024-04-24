@@ -8,9 +8,9 @@ jobs:
     with:
       bw-legacy: false
       deploy-env: "mainnet"
-      app-name: "quickstart"
-      deploy-account-address: quickstart.near
-      signer-account-address: quickstart.near
-      signer-public-key: ed25519:GTZpJWYSkDkwGGLPFDagS2uMeFSP7eVirYXwhQEMdoxj
+      app-name: "pokethe.near"
+      deploy-account-address: pokethe.near
+      signer-account-address: pokethe.near
+      signer-public-key: ed25519:4tjmAV1P3PhHAjrHsZwDkDfnxY1nnjD6DfqDun2gy5b9
     secrets:
       SIGNER_PRIVATE_KEY: ${{ secrets.SIGNER_PRIVATE_KEY }}

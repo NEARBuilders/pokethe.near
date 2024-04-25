@@ -161,7 +161,7 @@ return (
             type="text"
             className="form-control"
             value={target}
-            onChange={(e) => setTarget(e.target.value)}
+            onChange={(e) => setTarget((e.target.value).toLowerCase())}
             aria-label="poke-target"
           />
         </div>

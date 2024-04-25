@@ -1,7 +1,8 @@
 # pokethe.near
 
-This is a sample [bos-workspace](https://github.com/NEARBuilders/bos-workspace) app, adapted to work with Telegram HOT wallet. 
+This is a sample [bos-workspace](https://github.com/NEARBuilders/bos-workspace) app, built to work in Telegram HOT wallet. 
 
+<img width="376" alt="Screenshot 2024-04-24 at 11 52 00 PM" src="https://github.com/NEARBuilders/pokethe.near/assets/16282460/cbc86b16-fe31-409f-83dd-869fa50bd73b">
 
 ## Getting started
 

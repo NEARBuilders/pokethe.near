@@ -17,41 +17,16 @@ if (!filteredItems || !filteredItems.length) {
 }
 
 return (
-  <div style={{ height: "100%", width: "100%" }}>
-    <Feed
-      items={filteredItems}
-      // index={{
-      //   action: "notify",
-      //   key: accountId,
-      //   options: {
-      //     limit: 100,
-      //     order: "desc",
-      //     subscribe: true,
-      //   },
-      //   cacheOptions: {
-      //     ignoreCache: true,
-      //   },
-      // }}
-      // typeWhitelist={["poke"]}
-      Item={(a) => {
-        return (
-          <Widget
-            src="${config_account}/widget/PokeItem"
-            props={{ poker: a.accountId, target: accountId, blockHeight: a.blockHeight }}
-          />
-        );
-      }}
-      Layout={({ children }) => (
-        <div
-          style={{
-            // height: "100%",
-            // maxHeight: "100vh",
-            // overflowY: "scrollable",
-          }}
-        >
-          {children}
-        </div>
-      )}
-    />
-  </div>
+  <Feed
+    items={filteredItems}
+    Item={(a) => {
+      return (
+        <Widget
+          src="${config_account}/widget/PokeItem"
+          props={{ poker: a.accountId, target: accountId, blockHeight: a.blockHeight }}
+        />
+      );
+    }}
+    Layout={({ children }) => <div>{children}</div>}
+  />
 );

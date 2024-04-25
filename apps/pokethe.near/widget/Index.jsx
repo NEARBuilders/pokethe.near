@@ -82,15 +82,9 @@ if (!context.accountId) {
   );
 }
 
-const target = "mob.near";
-
-// vote for somebody to be the bos
-
-const [clicked, setClicked] = useState(false);
-const [showSettings, setShowSettings] = useState(false);
+const [target, setTarget] = useState("root.near");
 
 const poke = () => {
-  setClicked(!clicked);
   Social.set(
     {
       index: {
@@ -110,7 +104,9 @@ const poke = () => {
     },
     {
       force: true,
-      onCommit: () => {},
+      onCommit: () => {
+        // celebrate
+      },
       onCancel: () => {},
     }
   );
@@ -120,9 +116,6 @@ return (
   <Container>
     <Header>
       <h1>
-        <span onClick={() => setShowSettings(!showSettings)}>
-          <i className="bi bi-gear-fill" />
-        </span>
         <a
           href="https://github.com/nearbuilders/pokethe.near"
           target="_blank"
@@ -135,7 +128,7 @@ return (
     </Header>
     <div>
       <TargetContainer>
-        <PokeTarget onClick={poke} clicked={clicked}>
+        <PokeTarget onClick={poke}>
           <Widget
             src="${alias_mob}/widget/ProfileImage"
             props={{
@@ -158,7 +151,16 @@ return (
             }}
           />
         </div>
-        <h1>poke a bos</h1>{" "}
+        <h1>poke a bos</h1>
+        <div className="input-group mt-3">
+          <input
+            type="text"
+            className="form-control"
+            value={target}
+            onChange={(e) => setTarget(e.target.value)}
+            aria-label="poke-target"
+          />
+        </div>
       </TargetContainer>
       <PokeFeedContainer>
         <h3>Activity</h3>

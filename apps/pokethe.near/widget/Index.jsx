@@ -12,6 +12,10 @@ const Container = styled.div`
   padding-bottom: 100px;
   margin: 10px;
   border-radius: 30px;
+
+  a {
+    color: inherit;
+  }
 `;
 
 const TargetContainer = styled.div`
